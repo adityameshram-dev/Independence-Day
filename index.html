@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independence Day 2026 — Celebrating 80 Years of Freedom</title>
+  <meta name="description"
+    content="A cinematic tribute to the courage, sacrifice, and dreams that shaped a free India. Celebrating 80 Years of Freedom — 15 August 2026.">
+
+  <!-- Google Fonts for Indian & Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Rozha+One&display=swap"
+    rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- SVG Tiranga Flag Definition Sprite -->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="tiranga-clip">
+        <rect width="300" height="200" rx="12" ry="12"/>
+      </clipPath>
+    </defs>
+    <symbol id="tiranga-flag-symbol" viewBox="0 0 300 200">
+      <g clip-path="url(#tiranga-clip)">
+        <!-- Saffron Top Band -->
+        <rect width="300" height="66.67" y="0" fill="#FF9933"/>
+        <!-- White Middle Band -->
+        <rect width="300" height="66.67" y="66.67" fill="#FFFFFF"/>
+        <!-- Green Bottom Band -->
+        <rect width="300" height="66.67" y="133.33" fill="#138808"/>
+        <!-- Center Ashoka Chakra -->
+        <circle cx="150" cy="100" r="27" fill="none" stroke="#000080" stroke-width="3.5"/>
+        <circle cx="150" cy="100" r="5" fill="#000080"/>
+        <g stroke="#000080" stroke-width="2">
+          <line x1="150" y1="73" x2="150" y2="127"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(15 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(30 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(45 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(60 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(75 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(90 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(105 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(120 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(135 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(150 150 100)"/>
+          <line x1="150" y1="73" x2="150" y2="127" transform="rotate(165 150 100)"/>
+        </g>
+      </g>
+      <rect width="300" height="200" rx="12" ry="12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="4"/>
+    </symbol>
+  </svg>
+
+  <!-- Background Atmospheric Canvas & Effects -->
+  <div class="bg-effects">
+    <div class="bg-gradient-overlay"></div>
+    <div class="bg-saffron-glow"></div>
+    <div class="bg-green-glow"></div>
+    <canvas id="bgParticlesCanvas" class="bg-particles-canvas"></canvas>
+
+    <!-- Rotating Ashoka Chakra Watermark -->
+    <div class="bg-chakra-wrapper" aria-hidden="true">
+      <svg class="bg-chakra-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="95" stroke="currentColor" stroke-width="2.5" opacity="0.3" />
+        <circle cx="100" cy="100" r="85" stroke="currentColor" stroke-width="1.5" opacity="0.2" />
+        <circle cx="100" cy="100" r="18" fill="currentColor" opacity="0.4" />
+        <g opacity="0.25">
+          <!-- 24 Spokes -->
+          <line x1="100" y1="100" x2="100" y2="10" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="100" y2="190" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="10" y2="100" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="190" y2="100" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="163.64" y2="36.36" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="36.36" y2="163.64" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="36.36" y2="36.36" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="163.64" y2="163.64" stroke="currentColor" stroke-width="2" />
+          <line x1="100" y1="100" x2="124.59" y2="11.7" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="75.41" y2="188.3" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="147.28" y2="28.4" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="52.72" y2="171.6" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="171.6" y2="52.72" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="28.4" y2="147.28" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="188.3" y2="75.41" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="11.7" y2="124.59" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="188.3" y2="124.59" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="11.7" y2="75.41" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="171.6" y2="147.28" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="28.4" y2="52.72" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="147.28" y2="171.6" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="52.72" y2="28.4" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="124.59" y2="188.3" stroke="currentColor" stroke-width="1.5" />
+          <line x1="100" y1="100" x2="75.41" y2="11.7" stroke="currentColor" stroke-width="1.5" />
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- App Wrapper (Main Container) -->
+  <div id="app" class="app-container">
+
+    <!-- Transparent Glass Navigation Bar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-flag">
+            <svg class="tiranga-flag brand-flag-svg" viewBox="0 0 300 200" aria-label="Indian Flag" role="img">
+              <use href="#tiranga-flag-symbol" xlink:href="#tiranga-flag-symbol"></use>
+            </svg>
+          </span>
+          <span class="brand-text">INDIA <span class="brand-year">2026</span></span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#journey" class="nav-link">Our Freedom</a></li>
+          <li class="nav-item"><a href="#heroes" class="nav-link">Heroes</a></li>
+          <li class="nav-item"><a href="#midnight" class="nav-link">Midnight</a></li>
+          <li class="nav-item"><a href="#indiatoday" class="nav-link">India Today</a></li>
+          <li class="nav-item"><a href="#tribute" class="nav-link">Tribute</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <span class="date-badge">15 AUG 2026</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <header id="hero" class="hero-section">
+      <div class="hero-container">
+
+        <!-- Left Side: Hero Text Content -->
+        <div class="hero-content">
+          <div class="hero-badge animate-stagger" style="--stagger-order: 1;">
+            <span class="sparkle">✦</span> 15 AUGUST 2026 <span class="sparkle">✦</span>
+          </div>
+
+          <h1 class="hero-title animate-stagger" style="--stagger-order: 2;">
+            <span class="hindi-heading">स्वतंत्रता का उत्सव</span>
+          </h1>
+
+          <h2 class="hero-subtitle animate-stagger" style="--stagger-order: 3;">
+            Celebrating 80th Years of Freedom
+          </h2>
+
+          <p class="hero-description animate-stagger" style="--stagger-order: 4;">
+            A tribute to the courage, sacrifice and dreams that shaped a free, sovereign India.
+          </p>
+
+          <div class="hero-cta-group animate-stagger" style="--stagger-order: 5;">
+            <a href="#journey" class="btn btn-primary">
+              <span>Explore India's Journey</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7" />
+              </svg>
+            </a>
+            <a href="#tribute" class="btn btn-secondary">
+              <span>Pay Tribute</span>
+              <svg class="tiranga-flag btn-flag" viewBox="0 0 300 200" aria-hidden="true">
+                <use href="#tiranga-flag-symbol" xlink:href="#tiranga-flag-symbol"></use>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Stats Banner -->
+          <div class="hero-stats animate-stagger" style="--stagger-order: 6;">
+            <div class="stat-item">
+              <span class="stat-number">80</span>
+              <span class="stat-label">Years of Glory</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">1.4B+</span>
+              <span class="stat-label">United Voices</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">28</span>
+              <span class="stat-label">States & 8 UTs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Waving Indian Flag & Flagpole Stage -->
+        <div id="flagStage" class="hero-flag-stage animate-stagger" style="--stagger-order: 6;">
+          <div class="flag-environment">
+            <!-- Warm Sunrise Glow behind flag -->
+            <div class="flag-sun-glow"></div>
+
+            <!-- Metallic Flagpole Assembly -->
+            <div class="flagpole">
+              <div class="flagpole-finial" title="Gold Top Finial"></div>
+              <div class="flagpole-ring top-ring"></div>
+              <div class="flagpole-shaft"></div>
+              <div class="flagpole-ring bottom-ring"></div>
+              <div class="flagpole-base"></div>
+            </div>
+
+            <!-- Canvas Flag Stage (Photorealistic 3D Cloth Animation) -->
+            <div class="flag-canvas-wrapper">
+              <canvas id="flagCanvas" class="flag-canvas" width="580" height="380"></canvas>
+
+              <!-- Fallback DOM node for legacy compatibility & accessibility -->
+              <div id="wavingFlag" class="sr-only" aria-label="Waving Tricolor Indian Flag">Indian Flag</div>
+              <div class="flag-shadow"></div>
+            </div>
+          </div>
+
+          <!-- Interactive Wind Speed Controls -->
+          <div class="wind-controls" aria-label="Wind speed controller">
+            <span class="wind-label">Breeze:</span>
+            <button class="wind-btn active" data-wind="gentle">Gentle</button>
+            <button class="wind-btn" data-wind="breezy">Breezy</button>
+            <button class="wind-btn" data-wind="strong">Strong</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Scroll Indicator -->
+      <a href="#journey" class="scroll-down-indicator" aria-label="Scroll to Journey section">
+        <span class="scroll-text">Scroll Down</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </a>
+    </header>
+
+    <!-- MAIN CONTENT SECTIONS -->
+    <main id="mainContent">
+
+      <!-- SECTION 2: THE JOURNEY TO FREEDOM (TIMELINE) -->
+      <section id="journey" class="section journey-section">
+        <div class="section-container">
+
+          <div class="section-header reveal">
+            <span class="section-tag">HISTORICAL LEGACY</span>
+            <h2 class="section-title">The Journey to Freedom</h2>
+            <p class="section-subtitle">
+              From the first spark of resistance in 1857 to the dawn of a sovereign nation in 1947.
+            </p>
+          </div>
+
+          <!-- Timeline Container -->
+          <div id="timeline" class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- Milestone 1: 1857 -->
+            <div class="timeline-item reveal" data-year="1857">
+              <div class="timeline-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content">
+                <div class="timeline-badge">1857</div>
+                <h3 class="timeline-title">First War of Independence</h3>
+                <p class="timeline-desc">
+                  The uprising of 1857 began with the revolt of Indian soldiers at Meerut and spread across northern and
+                  central India. Mangal Pandey's earlier resistance at Barrackpore became one of the important sparks of
+                  the rebellion.
+                </p>
+                <div class="timeline-figure">Key Figure: Mangal Pandey & Rani Lakshmibai</div>
+              </div>
+            </div>
+
+            <!-- Milestone 2: 1885 -->
+            <div class="timeline-item reveal" data-year="1885">
+              <div class="timeline-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content">
+                <div class="timeline-badge">1885</div>
+                <h3 class="timeline-title">Formation of Indian National Congress</h3>
+                <p class="timeline-desc">
+                  The foundation of an organized political platform laid the democratic roots for self-governance,
+                  national unity, and constitutional agitation.
+                </p>
+                <div class="timeline-figure">Key Figure: A.O. Hume, W.C. Bonnerjee & Early Patriots</div>
+              </div>
+            </div>
+
+            <!-- Milestone 3: 1919 -->
+            <div class="timeline-item reveal" data-year="1919">
+              <div class="timeline-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content">
+                <div class="timeline-badge">1919</div>
+                <h3 class="timeline-title">Jallianwala Bagh & National Resistance</h3>
+                <p class="timeline-desc">
+                  The Jallianwala Bagh massacre shocked the nation and intensified opposition to British rule, becoming
+                  a major turning point in India's freedom struggle.
+                </p>
+                <div class="timeline-figure">Key Impact: Rabindranath Tagore renounced Knighthood</div>
+              </div>
+            </div>
+
+            <!-- Milestone 4: 1920 -->
+            <div class="timeline-item reveal" data-year="1920">
+              <div class="timeline-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content">
+                <div class="timeline-badge">1920</div>
+                <h3 class="timeline-title">Non-Cooperation Movement</h3>
+                <p class="timeline-desc">
+                  Mahatma Gandhi led the Non-Cooperation Movement, encouraging Indians to boycott British institutions,
+                  goods, and titles as part of a nationwide campaign of nonviolent resistance.
+                </p>
+                <div class="timeline-figure">Key Principle: Ahimsa & Swadeshi</div>
+              </div>
+            </div>
+
+            <!-- Milestone 5: 1930 -->
+            <div class="timeline-item reveal" data-year="1930">
+              <div class="timeline-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content">
+                <div class="timeline-badge">1930</div>
+                <h3 class="timeline-title">Dandi March & Salt Satyagraha</h3>
+                <p class="timeline-desc">
+                  A 240-mile march to Dandi broke the unjust British salt monopoly, demonstrating the moral power of
+                  civil disobedience to the entire world.
+                </p>
+                <div class="timeline-figure">Key Figure: Mahatma Gandhi & 78 Volunteers</div>
+              </div>
+            </div>
+
+            <!-- Milestone 6: 1942 -->
+            <div class="timeline-item reveal" data-year="1942">
+              <div class="timeline-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content">
+                <div class="timeline-badge">1942</div>
+                <h3 class="timeline-title">Quit India Movement & Azad Hind Fauj</h3>
+                <p class="timeline-desc">
+                  Gandhi's "Do or Die" call combined with Netaji Subhas Chandra Bose's INA military campaign shook the
+                  foundation of British colonial rule.
+                </p>
+                <div class="timeline-figure">Key Call: "Karenge Ya Marenge" & "Jai Hind"</div>
+              </div>
+            </div>
+
+            <!-- Milestone 7: 1947 -->
+            <div class="timeline-item timeline-item-highlight reveal" data-year="1947">
+              <div class="timeline-dot golden-dot"><span class="dot-inner"></span></div>
+              <div class="timeline-content highlight-content">
+                <div class="timeline-badge golden-badge">15 AUGUST 1947</div>
+                <h3 class="timeline-title">The Dawn of Independence</h3>
+                <p class="timeline-desc">
+                  At the stroke of midnight on 14–15 August 1947, India became an independent nation after nearly two
+                  centuries of British rule.
+                </p>
+                <div class="timeline-figure">Historical Moment: "Tryst with Destiny"</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SECTION 3: FREEDOM HEROES SECTION -->
+      <section id="heroes" class="section heroes-section">
+        <div class="section-container">
+
+          <div class="section-header reveal">
+            <span class="section-tag">GUARDIANS OF LIBERTY</span>
+            <h2 class="section-title">Heroes of the Nation</h2>
+            <p class="section-subtitle">
+              Honor the visionaries, revolutionaries, and martyrs who sacrificed everything for our freedom.
+            </p>
+          </div>
+
+          <div class="heroes-grid">
+
+            <!-- Hero 1: Mahatma Gandhi -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Gandhi.jpeg" alt="Mahatma Gandhi" class="hero-card-img" loading="lazy">
+                <div class="hero-card-tag">Father of the Nation</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Mahatma Gandhi</h3>
+                <div class="hero-card-dates">1869 – 1948</div>
+                <p class="hero-card-quote">“Leader of India's nonviolent freedom movement and an advocate of
+                  Satyagraha.”</p>
+                <p class="hero-card-desc">Pioneered non-violent Satyagraha, inspiring civil rights movements globally.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hero 2: Subhas Chandra Bose -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Subhas Chandra Bose.jpg" alt="Subhas Chandra Bose" class="hero-card-img"
+                  loading="lazy">
+                <div class="hero-card-tag">Netaji</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Subhas Chandra Bose</h3>
+                <div class="hero-card-dates">1897 – 1945</div>
+                <p class="hero-card-quote">"Give me blood, and I shall give you freedom!"</p>
+                <p class="hero-card-desc">Formed the Indian National Army (Azad Hind Fauj) to liberate India by force.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hero 3: Bhagat Singh -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Bhagat Singh.jpeg" alt="Bhagat Singh" class="hero-card-img" loading="lazy">
+                <div class="hero-card-tag">Shaheed-e-Azam</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Bhagat Singh</h3>
+                <div class="hero-card-dates">1907 – 1931</div>
+                <p class="hero-card-quote">"They may kill me, but they cannot kill my ideas."</p>
+                <p class="hero-card-desc">Fearless youth icon whose supreme sacrifice ignited patriotic passion
+                  nationwide.</p>
+              </div>
+            </div>
+
+            <!-- Hero 4: Chandrashekhar Azad -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Chandrashekhar Azad.jpg" alt="Chandrashekhar Azad" class="hero-card-img"
+                  loading="lazy">
+                <div class="hero-card-tag">Revolutionary Leader</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Chandrashekhar Azad</h3>
+                <div class="hero-card-dates">1906 – 1931</div>
+                <p class="hero-card-quote">"Azad hi rahe hain, Azad hi rahenge!"</p>
+                <p class="hero-card-desc">Master strategist of the HRA who vowed never to be captured alive by the
+                  enemy.</p>
+              </div>
+            </div>
+
+            <!-- Hero 5: Rani Lakshmibai -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Rani Lakshmibai.jpg" alt="Rani Lakshmibai" class="hero-card-img"
+                  loading="lazy">
+                <div class="hero-card-tag">Heroine of Jhansi</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Rani Lakshmibai</h3>
+                <div class="hero-card-dates">1828 – 1858</div>
+                <p class="hero-card-quote">"I will not surrender my Jhansi!"</p>
+                <p class="hero-card-desc">Epitome of female valor who led her forces bravely in the 1857 War of
+                  Independence.</p>
+              </div>
+            </div>
+
+            <!-- Hero 6: Sardar Vallabhbhai Patel -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Sardar Vallabhbhai Patel.jpg" alt="Sardar Vallabhbhai Patel"
+                  class="hero-card-img" loading="lazy">
+                <div class="hero-card-tag">Iron Man of India</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Sardar Vallabhbhai Patel</h3>
+                <div class="hero-card-dates">1875 – 1950</div>
+                <p class="hero-card-quote">"Manpower without unity is not a strength."</p>
+                <p class="hero-card-desc">Played a central role in integrating India's princely states into the newly
+                  independent Union of India.</p>
+              </div>
+            </div>
+
+            <!-- Hero 7: Bal Gangadhar Tilak -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Bal Gangadhar Tilak.jpg" alt="Bal Gangadhar Tilak" class="hero-card-img"
+                  loading="lazy">
+                <div class="hero-card-tag">Lokmanya</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Bal Gangadhar Tilak</h3>
+                <div class="hero-card-dates">1856 – 1920</div>
+                <p class="hero-card-quote">"Swaraj is my birthright, and I shall have it!"</p>
+                <p class="hero-card-desc">Father of Indian Unrest who mobilized public festivals for national
+                  consciousness.</p>
+              </div>
+            </div>
+
+            <!-- Hero 8: Jawaharlal Nehru -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Jawaharlal Nehru.jpg" alt="Jawaharlal Nehru" class="hero-card-img"
+                  loading="lazy">
+                <div class="hero-card-tag">First Prime Minister</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Jawaharlal Nehru</h3>
+                <div class="hero-card-dates">1889 – 1964</div>
+                <p class="hero-card-quote">"Citizenship consists in the service of the country."</p>
+                <p class="hero-card-desc">Visionary leader who shaped independent India's democratic foundations &
+                  scientific institutes.</p>
+              </div>
+            </div>
+
+            <!-- Hero 9: Sarojini Naidu -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Sarojini Naidu.jpg" alt="sarojini naidu" class="hero-card-img" loading="lazy">
+                <div class="hero-card-tag">Nightingale of India</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Sarojini Naidu</h3>
+                <div class="hero-card-dates">1879 – 1949</div>
+                <p class="hero-card-quote">"A country's greatness lies in its undying ideals of love and sacrifice."</p>
+                <p class="hero-card-desc">Poet, freedom fighter, and the first woman Governor of an Indian state.</p>
+              </div>
+            </div>
+
+            <!-- Hero 10: Mangal Pandey -->
+            <div class="hero-card reveal">
+              <div class="hero-card-image-wrapper">
+                <img src="./assets/images/Mangal Pandey.jpg" alt="Mangal Pandey" class="hero-card-img" loading="lazy">
+                <div class="hero-card-tag">The First Spark</div>
+              </div>
+              <div class="hero-card-body">
+                <h3 class="hero-card-name">Mangal Pandey</h3>
+                <div class="hero-card-dates">1827 – 1857</div>
+                <p class="hero-card-quote">"Rise up against tyranny!"</p>
+                <p class="hero-card-desc">Heroic sepoy whose defiant act in Barrackpore triggered the Great Revolt of
+                  1857.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SECTION 4: THE NIGHT OF FREEDOM -->
+      <section id="midnight" class="section midnight-section">
+        <div class="midnight-bg-glow"></div>
+        <div class="section-container">
+
+          <div class="midnight-box reveal">
+            <div class="midnight-header">
+              <span class="midnight-time-badge">MIDNIGHT · 14-15 AUGUST 1947</span>
+              <h2 class="midnight-headline">"At the stroke of the midnight hour..."</h2>
+              <h3 class="midnight-subheadline">"...India awakened to life and freedom."</h3>
+            </div>
+
+            <blockquote class="midnight-quote">
+              "Long years ago we made a tryst with destiny, and now the time comes when we shall redeem our pledge... At
+              the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom."
+              <footer>— Pandit Jawaharlal Nehru</footer>
+            </blockquote>
+
+            <div class="midnight-visual-cue">
+              <div class="horizon-glow"></div>
+              <div class="starry-sky-dots"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SECTION 5: INDIA TODAY (VISION 2026 & BEYOND) -->
+      <section id="indiatoday" class="section india-today-section">
+        <div class="section-container">
+
+          <div class="section-header reveal">
+            <span class="section-tag">MODERN RESURGENCE</span>
+            <h2 class="section-title">India Today & Future</h2>
+            <p class="section-subtitle">
+              Carrying forward the torch of freedom with technology, innovation, and self-reliance.
+            </p>
+          </div>
+
+          <div class="today-grid">
+
+            <!-- Pillar 1: Innovation -->
+            <div class="today-card reveal">
+              <div class="today-card-icon">🚀</div>
+              <h3 class="today-card-title">Innovation & Tech</h3>
+              <p class="today-card-desc">
+                Global hub for software, AI innovation, technology startups, and world-class engineering talent.
+              </p>
+            </div>
+
+            <!-- Pillar 2: Education -->
+            <div class="today-card reveal">
+              <div class="today-card-icon">🎓</div>
+              <h3 class="today-card-title">Education & Youth</h3>
+              <p class="today-card-desc">
+                Empowering the world's largest youth demographic with modern STEM education and research excellence.
+              </p>
+            </div>
+
+            <!-- Pillar 3: Science & Defense -->
+            <div class="today-card reveal">
+              <div class="today-card-icon">🛡️</div>
+              <h3 class="today-card-title">Science & Defense</h3>
+              <p class="today-card-desc">
+                Self-reliant defense production (Atmanirbhar Bharat) protecting sovereign borders with advanced tech.
+              </p>
+            </div>
+
+            <!-- Pillar 4: Digital India -->
+            <div class="today-card reveal">
+              <div class="today-card-icon">⚡</div>
+              <h3 class="today-card-title">Digital India</h3>
+              <p class="today-card-desc">
+                Revolutionary UPI digital payments ecosystem processing billions of seamless instant transactions.
+              </p>
+            </div>
+
+            <!-- Pillar 5: Space Exploration -->
+            <div class="today-card reveal">
+              <div class="today-card-icon">🌌</div>
+              <h3 class="today-card-title">Space Exploration</h3>
+              <p class="today-card-desc">
+                ISRO's historic lunar landings, Gaganyaan human spaceflight, solar exploration, and satellite networks.
+              </p>
+            </div>
+
+            <!-- Pillar 6: Young India -->
+            <div class="today-card reveal">
+              <div class="today-card-icon">
+                <svg class="tiranga-flag card-flag-icon" viewBox="0 0 300 200" aria-label="Indian Flag" role="img">
+                  <use href="#tiranga-flag-symbol" xlink:href="#tiranga-flag-symbol"></use>
+                </svg>
+              </div>
+              <h3 class="today-card-title">Young & Vibrant India</h3>
+              <p class="today-card-desc">
+                A vibrant, democratic nation driving sustainable global economic growth and democratic values.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SECTION 6: TRIBUTE SECTION -->
+      <section id="tribute" class="section tribute-section">
+        <div class="section-container">
+
+          <div class="tribute-card reveal">
+            <div class="tribute-emblem">
+              <svg class="tiranga-flag tribute-flag-emblem" viewBox="0 0 300 200" aria-label="Indian Flag" role="img">
+                <use href="#tiranga-flag-symbol" xlink:href="#tiranga-flag-symbol"></use>
+              </svg>
+            </div>
+
+            <h2 class="tribute-heading">"Freedom was not given. It was earned."</h2>
+            <p class="tribute-subheading">
+              Remember the sacrifice. Celebrate the freedom. Build the future.
+            </p>
+
+            <div class="jai-hind-display">
+              <span class="jai-hind-text">जय हिन्द</span>
+            </div>
+
+            <!-- Interactive Flame / Virtual Candle Tribute -->
+            <div class="tribute-action-box">
+              <button id="payTributeBtn" class="btn btn-tribute">
+                <span class="flame-icon">🔥</span>
+                <span>Light a Flame of Freedom</span>
+              </button>
+              <div id="tributeCounter" class="tribute-counter-text">
+                <span id="tributeCount">15,842</span> Virtual Flames Lit Today
+              </div>
+            </div>
+
+            <!-- Tricolor Ribbon Wave Canvas -->
+            <div class="tricolor-wave-wrapper">
+              <canvas id="tricolorWaveCanvas" class="tricolor-wave-canvas" width="800" height="80"></canvas>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SECTION 7: FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-container">
+
+        <div class="footer-chakra">
+          <svg viewBox="0 0 100 100" class="footer-chakra-svg" width="40" height="40" opacity="0.6">
+            <circle cx="50" cy="50" r="45" stroke="#000080" stroke-width="3" fill="none" />
+            <circle cx="50" cy="50" r="8" fill="#000080" />
+            <g stroke="#000080" stroke-width="1.5">
+              <line x1="50" y1="50" x2="50" y2="5" />
+              <line x1="50" y1="50" x2="50" y2="95" />
+              <line x1="50" y1="50" x2="5" y2="50" />
+              <line x1="50" y1="50" x2="95" y2="50" />
+              <line x1="50" y1="50" x2="81.8" y2="18.2" />
+              <line x1="50" y1="50" x2="18.2" y2="81.8" />
+              <line x1="50" y1="50" x2="18.2" y2="18.2" />
+              <line x1="50" y1="50" x2="81.8" y2="81.8" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="footer-title">15 August 2026</div>
+        <div class="footer-subtitle">Celebrating India's 80th Independence Day</div>
+        <div class="footer-motto">
+          Jai Hind 
+          <svg class="tiranga-flag inline-flag" viewBox="0 0 300 200" aria-hidden="true">
+            <use href="#tiranga-flag-symbol" xlink:href="#tiranga-flag-symbol"></use>
+          </svg> 
+          · Vande Mataram
+        </div>
+
+        <a href="#hero" class="back-to-top-btn" aria-label="Back to top">
+          ↑ Top
+        </a>
+
+        <!-- Legacy Slideshow & Final Message Fallback Containers (preserves JS refs) -->
+        <div id="slideshow" class="slideshow hidden" style="display:none;" aria-hidden="true">
+          <div class="slide-track" id="slideTrack"></div>
+          <div class="slide-dots" id="slideDots"></div>
+        </div>
+        <div id="finalMessage" class="final-message hidden" style="display:none;" aria-hidden="true"></div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- External JS -->
+  <script src="index.js"></script>
+</body>
+
+</html>
